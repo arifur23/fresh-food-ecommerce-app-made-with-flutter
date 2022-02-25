@@ -34,9 +34,9 @@ class _CartScreenState extends State<CartScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: Column(
                   children: [
-                    CartItem(itemName: 'Broccoli', imagePath: 'Image', amount: '300g', editItem: () {  }, deleteItem: () {  }, price: '\$.200'),
-                    CartItem(itemName: 'Kale', imagePath: 'Image', amount: '3kg', editItem: () {  }, deleteItem: () {  }, price: '\$20'),
-                    CartItem( itemName: 'Tomato', imagePath: 'Image', amount: '20kg', editItem: () {  }, deleteItem: () {  }, price: '\$5.50'),
+                    CartItem(itemName: 'Broccoli', imagePath: 'assets/broccoli-.jpg', amount: '300g', editItem: () {  }, deleteItem: () {  }, price: '\$.200'),
+                    CartItem(itemName: 'Citrus', imagePath: 'assets/citrus.png', amount: '3kg', editItem: () {  }, deleteItem: () {  }, price: '\$20'),
+                    CartItem( itemName: 'Berry', imagePath: 'assets/berry.png', amount: '20kg', editItem: () {  }, deleteItem: () {  }, price: '\$5.50'),
                   ],
                 ),
               ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartItem extends StatefulWidget {
@@ -31,7 +32,7 @@ class _CartItemState extends State<CartItem> {
     return Padding(
       padding: const EdgeInsets.only(top: 5,bottom: 5),
       child: Container(
-        height: 60,
+        height: 80,
         width: size.width * .86,
         decoration: BoxDecoration(
             color: const Color(0xFFF0F4F8),
@@ -49,7 +50,19 @@ class _CartItemState extends State<CartItem> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:  [
-                        Text(widget.imagePath),
+                        Container(
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(widget.imagePath,
+                                fit: BoxFit.cover,
+                              )
+                          ),
+                        ),
                         const SizedBox(width: 30,),
                         Text(widget.itemName,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black.withOpacity(.3)),),
                       ],

@@ -22,18 +22,37 @@ class HomeListItem extends StatelessWidget {
             color: boxColor,
             borderRadius: BorderRadius.circular(10)
         ),
-        child: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 30,),
-              Image.asset(imagePath),
-              const SizedBox(height: 15,),
-              Text(name,style: kStyleNormal,)
-            ],
-          ),
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(imagePath,fit: BoxFit.cover,)
+              )
+        ),
+            const SizedBox(height: 20,),
+          Text(name,style: kStyleHeadingBlack,)
+          ],
         ),
       ),
     );
   }
 }
 
+// Stack(
+// children: [
+// Positioned(
+// top: 10,
+// // left: 30,
+// child: Image.asset(imagePath)),
+// Positioned(
+// bottom: 20,
+// left: 50,
+// child: Text(name,style: kStyleNormal,))
+// ],
+// )
